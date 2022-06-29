@@ -5,7 +5,16 @@
 
 <h1>Restaurant</h1>
 
-<div>@Model.Message</div>
+<form method="get"> 
+    <div class="form-group">
+        <div class="input-group">
+            <input type="search" class="form-control" value="" name="searchTerm">   
+            <button type="button" class="btn btn-default btn-sm">
+               search
+            </button>
+         </div>
+    </div>
+</form>
 
 <table class="table">
     @foreach(var restaurant in Model.Restaurants)
