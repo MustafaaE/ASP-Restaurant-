@@ -5,9 +5,9 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pluralsight-course-ASP", "Pluralsight-course-ASP\Pluralsight-course-ASP.csproj", "{710B6B62-BF02-4AE1-B492-A867B3885130}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdeToFood.Core", "OdeToFood.Core\OdeToFood.Core.csproj", "{60C7DAB8-FE58-4B40-8DB6-291C388B6662}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdeToFood.Core", "OdeToFood.Core\OdeToFood.Core.csproj", "{60C7DAB8-FE58-4B40-8DB6-291C388B6662}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdeToFood.Data", "OdeToFood.Data\OdeToFood.Data.csproj", "{545FFA18-C0A5-4C05-A69E-87F899F21971}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdeToFood.Data", "OdeToFood.Data\OdeToFood.Data.csproj", "{545FFA18-C0A5-4C05-A69E-87F899F21971}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
