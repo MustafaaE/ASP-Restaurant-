@@ -13,6 +13,7 @@ namespace OdeToFood.Data
         Restaurant GetById(int id);
         Restaurant Update(Restaurant updateRestaurant);
         //unit of work that collects changes and commits them 
+        Restaurant Add(Restaurant newRestaurant);
         int Commit();
     }
     public class InMemoryRestaurantData : IRestaurantData
@@ -34,6 +35,12 @@ namespace OdeToFood.Data
             return restaurants.SingleOrDefault(r => r.Id == id);
         }
 
+        public Restaurant Add(Restaurant newRestaurant)
+        {
+            restaurants.Add(newRestaurant);
+            newRestaurant.Id = restaurants.Max(r => r.Id) + 1;
+            return newRestaurant;
+        }
         public Restaurant Update(Restaurant updatedRestaurant)
         {
             var restaurant = restaurants.Single(r => r.Id == updatedRestaurant.Id);
