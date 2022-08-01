@@ -15,6 +15,7 @@ namespace OdeToFood.Data
         //unit of work that collects changes and commits them 
         Restaurant Add(Restaurant newRestaurant);
         Restaurant Delete(int id);
+        int GetCountOfRestaurants();
         int Commit();
     }
 }
