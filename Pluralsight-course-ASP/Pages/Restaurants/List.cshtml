@@ -1,6 +1,7 @@
 ﻿@page
 @model ListModel
 @{
+    ViewData["Title"] = "Restaurants";
 }
 
 <h1>Restaurant</h1>
@@ -16,29 +17,16 @@
     </div>
 </form>
 
-<table class="table">
-    @foreach(var restaurant in Model.Restaurants)
-    {
-        <tr>
-            <td>@restaurant.Name</td>
-            <td>@restaurant.Location</td>
-            <td>@restaurant.Cuisine</td>
-            <td>
-                <a class="btn btn-lg" 
-                asp-page="./Detail" 
-                asp-route-restaurantId="@restaurant.Id">
-                Detail
-                </a>
-                <a class="btn btn-lg" 
-                asp-page="./Edit" 
-                asp-route-restaurantId="@restaurant.Id">
-                Edit
-                </a>
-            </td>
-        </tr>
-    }
-</table>
+@foreach(var restaurant in Model.Restaurants)
+{
+    <partial name="_Summary" model="restaurant"/>
+}
+
 <!-- does not take to new page by default, bcs edit page demands and requires a restaurant ID "page {restaurantId:int}"
     in row 1 in Edit.cshtml. make it a optional parameter by ? 
 -->
 <a asp-page="./Edit" class="btn btn-primary"> Add new</a>
+
+@section footer {
+    <div> @Model.Message</div>
+}

@@ -1,0 +1,16 @@
+﻿@page "{restaurantId}"
+@model Pluralsight_course_ASP.Pages.Restaurants.DeleteModel
+@{
+    ViewData["Title"] = "Delete";
+
+}
+
+
+        <div class="alert alert-danger">
+            Sure you want to delete @Model.Restaurant.Name ?
+        </div>
+        <form method="post">
+            <button type="submit" class="btn btn-danger">Yes!</button>
+            <a asp-page="List" class="btn btn-default">Cancel</a>
+        </form>
+
